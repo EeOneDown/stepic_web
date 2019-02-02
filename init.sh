@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-sudo rm /etc/nginx/sites-enabled/default
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
-sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
+sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/hello.py
 sudo /etc/init.d/gunicorn restart
-gunicorn -c test hello:app
+gunicorn -c hello.py hello:app
