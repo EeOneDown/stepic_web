@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-pip3 install -r requirements 
+pip3 install -r requirements.txt
 
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
 sudo /etc/init.d/nginx restart
