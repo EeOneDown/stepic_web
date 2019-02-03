@@ -8,5 +8,5 @@ urlpatterns = [
     url(r'^question/(?P<pk>\d+)/$', views.test, name='question'),
     url(r'^ask/$', views.test, name='ask'),
     url(r'^popular/$', views.test, name='popular'),
-    url(r'^new$', views.test, name='new'),
+    url(r'^new/$', views.test, name='new'),
 ]

@@ -9,4 +9,6 @@ sudo ln -sf /home/box/web/etc/gunicorn-wsgi.conf /etc/gunicorn.d/test-wsgi
 sudo ln -sf /home/box/web/etc/gunicorn-django.conf /etc/gunicorn.d/test-django
 sudo /etc/init.d/gunicorn restart
 # sudo gunicorn -c test-wsgi -b 0.0.0.0:8080 hello:app &
+# cd ask
+# gunicorn -c ../etc/gunicorn-django.conf -b 0.0.0.0:8000 ask.wsgi:application
 sudo gunicorn -c test-django -b 0.0.0.0:8000 ask.wsgi:application
