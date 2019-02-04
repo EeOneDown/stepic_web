@@ -11,8 +11,8 @@ sudo /etc/init.d/gunicorn restart
 
 sudo /etc/init.d/mysql start
 mysql -uroot -e "CREATE DATABASE djbase;"
-mysql -uroot -e "CREATE USER 'djuser@localhost' IDENTIFIED BY 'djangopass';"
-mysql -uroot -e "GRANT ALL ON djbase.* TO 'djuser@localhost';"
+mysql -uroot -e "CREATE USER 'djuser'@'localhost' IDENTIFIED BY 'djangopass';"
+mysql -uroot -e "GRANT ALL ON djbase.* TO 'djuser'@'localhost';"
 mysql -uroot -e "FLUSH PRIVILEGES;"
 
 # sudo gunicorn -c test-wsgi -b 0.0.0.0:8080 hello:app &
