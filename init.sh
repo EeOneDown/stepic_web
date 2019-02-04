@@ -17,6 +17,6 @@ mysql -uroot -e "FLUSH PRIVILEGES;"
 
 # sudo gunicorn -c test-wsgi -b 0.0.0.0:8080 hello:app &
 cd ask
-venv/bin/python manage.py migrate
+sudo python3 manage.py migrate
 gunicorn -c ../etc/gunicorn-django.conf -b 0.0.0.0:8000 ask.wsgi:application
 # sudo gunicorn -c test-django -b 0.0.0.0:8000 ask.wsgi:application
